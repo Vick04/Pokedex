@@ -1,22 +1,32 @@
-import React, { Component } from 'react'
-import MiniCardsContainer from './../MiniCardsContainer'
+import React, { useState } from "react";
+import MiniCardsContainer from "./../MiniCardsContainer";
+import { HomeBody } from "./HomeBody";
 
-class Home extends Component{
-    data = require('./../../Data/PokemonList');
+export const homeContext = React.createContext();
 
-    handleMiniCardSelected = pok => (
-        console.log(pok)
-    );
+const Home = () => {
+  const data = require("./../../Data/PokemonList");
 
-    render(){
-        return(
-            <div>
-                <MiniCardsContainer data={ this.data } onMiniCardSelected={ this.handleMiniCardSelected }/>
-            </div>
-        )
-    }
-}
+  const [pokemonSelected, setPokemonSelected] = useState(1);
 
+  const value = {
+    pokemonSelected,
+    selectPokemon: poke => {setPokemonSelected(poke)}
+  };
 
+  return (
+    <homeContext.Provider value={value}>
+      <div style={{position: "fixed"}}>
+      {value.pokemonSelected}
+
+      </div>
+      <HomeBody>
+        <MiniCardsContainer
+          data={data}
+        />
+      </HomeBody>
+    </homeContext.Provider>
+  );
+};
 
 export default Home;
