@@ -18,9 +18,10 @@ export const setLoading = (): ActionT => {
     };
 };
 
-export const setFirstOpen = (): ActionT => {
+export const setFirstOpen = (booleanValue: boolean): ActionT => {
     return {
         type: SETFIRSTOPEN,
+        booleanValue,
     };
 };
 

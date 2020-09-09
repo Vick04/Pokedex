@@ -1,10 +1,9 @@
-import React, { useEffect, FC } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { FC } from 'react';
+import { useSelector } from 'react-redux';
 import { Badge, LabelDataGrid, Text } from '../..';
 import { capitalize } from '../../../Functions';
 import { DamageType, ReduxState } from '../../../TS/Types';
 import { colors } from '../../VariablesAndConfigs';
-import { updateDamageRelations } from '../../../Redux/Actions';
 import styled from 'styled-components';
 
 const FlexDiv = styled.div`
@@ -13,15 +12,7 @@ const FlexDiv = styled.div`
 `;
 
 export const DamageBox: FC = () => {
-    const dispatch = useDispatch();
-    const fullData = useSelector((state: ReduxState) => state.fullData);
     const damageRelations = useSelector((state: ReduxState) => state.pokemon.damageRelations);
-
-    useEffect(() => {
-        const json = JSON.parse(fullData.typeData);
-        const damageRelationsData = json.damage_relations;
-        dispatch(updateDamageRelations(damageRelationsData));
-    }, [fullData]);
 
     const createRow = (label: string, array: DamageType[]) => {
         return (

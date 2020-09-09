@@ -8,8 +8,11 @@ import { mediaQueryResolutions } from '../../VariablesAndConfigs';
 
 const SearcherNoStyled: FC<{ className?: string }> = ({ className }) => {
     const dispatch = useDispatch();
+    const handleClick = () => {
+        dispatch(setSearching());
+    };
     return (
-        <ButtonIcon svgSize="textVerySmall" className={className} onClick={() => dispatch(setSearching())}>
+        <ButtonIcon svgSize="textVerySmall" className={className} onClick={handleClick}>
             <img src={searchIcon} />
         </ButtonIcon>
     );

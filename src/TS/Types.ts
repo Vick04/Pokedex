@@ -80,6 +80,7 @@ export type DamageRelations = {
 
 export type ActionT = {
     type: string;
+    booleanValue?: boolean;
     chain?: string[];
     damageRelations?: DamageRelations;
     data?: Data;

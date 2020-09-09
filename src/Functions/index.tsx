@@ -1,6 +1,6 @@
 import { textVerySmall, textSmall, textMedium, textLarge } from '../Components/VariablesAndConfigs';
 import { colors } from '../Components/VariablesAndConfigs';
-import { SizesI, FullData, Profile, flavorTextEntries, Data, Stat } from '../TS/Types';
+import { SizesI, FullData, Profile, flavorTextEntries, Data, Stat, DamageRelations } from '../TS/Types';
 import pokemonList from '../__Mocks__/pokemonList.json';
 
 export const calcPercent = (value: number, max: number): number => {
@@ -105,4 +105,9 @@ export const getInfoForEvoChainBox = (fullData: FullData): string[] => {
         member.evolves_to.map((subMember: { species: { name: string } }) => res.push(subMember.species.name));
     }
     return res;
+};
+
+export const getInfoForDamageBox = (fullData: FullData): DamageRelations => {
+    const json = JSON.parse(fullData.typeData);
+    return json.damage_relations;
 };
