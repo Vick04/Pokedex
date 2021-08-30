@@ -1,3 +1,7 @@
+## Update:
+
+El sitio web donde obtenia las imagenes esta fuera de linea, por ende voy a actualizar la fuente de imagenes lo antes posible.
+
 ## Features:
 
 - React JS
