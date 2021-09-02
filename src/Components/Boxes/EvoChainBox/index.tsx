@@ -16,7 +16,7 @@ export const EvoChainBox: FC = () => {
                     {mainPokemon.name === name ? (
                         <>
                             <div style={{ justifySelf: 'center' }}>
-                                <MiniImage src={`https://pokeres.bastionbot.org/images/pokemon/${getPokemonNumber(name)}.png`} size="80px" />
+                                <MiniImage src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getPokemonNumber(name)}.png`} size="80px" />
                             </div>
                             <Text fontSize="textSmall" fontWeight="bold">
                                 {capitalize(name)}
@@ -25,7 +25,7 @@ export const EvoChainBox: FC = () => {
                     ) : (
                         <>
                             <div style={{ justifySelf: 'center' }}>
-                                <MiniImage src={`https://pokeres.bastionbot.org/images/pokemon/${getPokemonNumber(name)}.png`} size="60px" />
+                                <MiniImage src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${getPokemonNumber(name)}.png`} size="60px" />
                             </div>
                             <Text fontSize="textVerySmall">{capitalize(name)}</Text>
                         </>
