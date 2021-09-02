@@ -30,7 +30,7 @@ export const SearchPanel: FC = () => {
             <Results firstOpen={firstOpen}>
                 {newPokemonList.map((pok) => (
                     <Box key={pok.number} onClick={() => handleClick(pok.number)}>
-                        <MiniImage src={`https://pokeres.bastionbot.org/images/pokemon/${pok.number}.png`} />
+                        <MiniImage src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pok.number}.png`} />
                         <Text color="white" fontSize="textVerySmall" fontWeight="bold">
                             {functions.capitalize(pok.name)}
                         </Text>
