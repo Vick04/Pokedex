@@ -18,7 +18,7 @@ export const ProfilePanel: FC = () => {
                     <Searcher />
                     <Name number={profile.number} name={capitalize(profile.name)} />
                     <Description desc={profile.description} />
-                    <ProfileImage link={`https://pokeres.bastionbot.org/images/pokemon/${profile.number}.png`} />
+                    <ProfileImage link={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${profile.number}.png`} />
                 </ProfilePanelStyled>
             )}
         </>
