@@ -5,9 +5,5 @@
 // PODES DEJAR EL PROGRAMA CORRIENDO MIENTRAS HACES LOS CAMBIOS Y ESTOS SE VAN A MOSTRAR EN VIVO
 
 export default function Home() {
-  return (
-    <>
-      <h1>TU HTML ACA</h1>
-    </>
-  );
+  return <h1>TU HTML ACA</h1>;
 }
