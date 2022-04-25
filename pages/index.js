@@ -6,6 +6,9 @@
 
 export default function Home() {
   return (
-    <h1>TU HTML ACA</h1>
-  )
+    <>
+      <h1>TU HTML ACA</h1>
+      <span></span>
+    </>
+  );
 }
